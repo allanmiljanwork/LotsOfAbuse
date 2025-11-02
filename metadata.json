@@ -1,0 +1,9 @@
+{
+    "id": "LotsofAbuse",
+    "name": "LotsOfAbuse",
+    "author": ["LotsOfAbuse"],
+    "description": "LotsofAbuse jokers",
+    "prefix": "prefix",
+    "main_file": "index.lua",
+    "version": "1.0.0"
+}
