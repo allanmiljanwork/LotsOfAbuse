@@ -1,1 +1,1 @@
-Mod for Balatro, with my friends (LotsOfAbuse)
+Mod for Balatro, with my friends (LotsOfAbuse) W.I.P
