@@ -84,6 +84,10 @@ local function load_files(path, dirs_only)
 end
 local path = SMODS.current_mod.path
 
+-- Annoyingly load title text lua
+local f, err = load_file_native(path .. "/Jtem/titletext.lua")
+if f then f() end
+load_files(path, true)
 --#endregion
 
 
