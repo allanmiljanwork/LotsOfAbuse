@@ -28,6 +28,9 @@ SMODS.ObjectType({
     end,
 })
 
+
+--- TEMPORARY NFS to change it with my code so its not fully stolen LOL
+
 -- FILE LOADING
 --#region File Loading
 local nativefs = NFS
