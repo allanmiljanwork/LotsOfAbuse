@@ -265,6 +265,53 @@ SMODS.Joker{
     end,
 }
 
+-- Kinkekaart
 
-----------------------------------------------------------
+SMODS.Atlas{
+    key = 'giftcard',
+    path = 'Kinkekaart.png',
+    px = 71,
+    py = 95,
+}
+
+SMODS.Joker{
+    key = 'giftcard',
+    loc_txt = {
+        name = 'Gift Card',
+        text = { "For each {C:attention}Burger{} {E:2}Joker{} {X:mult,C:white}X2.5{} Mult{}"},
+    },
+    atlas = 'giftcard',
+    rarity = 3,
+    cost = 15,
+    pools = { ["Lotsofabuse"] = true },
+
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+
+    pos = { x = 0, y = 0, },
+    config = { extra = { xmult = 2.5 } },
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = { Xmult_mod = self.config.extra.xmult } }
+    end,
+
+    calculate = function(self, card, context)
+
+        if context.other_joker and context.other_joker ~= card then
+            if context.other_joker.config.center.pools and 
+               context.other_joker.config.center.pools["Burger"] then
+                
+                return {
+                    message = "X" .. card.ability.extra.xmult .. " Mult",
+                    Xmult_mod = card.ability.extra.xmult,
+                    colour = G.C.MULT
+                }
+            end
+        end
+    end,
+}
+-----------------------------------------------------------
 ----------- MOD CODE END ----------------------------------
