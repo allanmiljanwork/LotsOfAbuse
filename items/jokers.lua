@@ -316,5 +316,50 @@ SMODS.Joker{
         end
     end,
 }
+
+    -- Allan kaart
+
+    SMODS.Atlas{
+        key = 'allan',
+        path = 'Defeat.png',
+        px = 71,
+        py = 95,
+    }
+
+    SMODS.Joker {
+
+        key = 'allan',
+        loc_txt = {
+            name = 'Defeatist Allan',
+            text = { "{C:green}1 in 4{} chance the {E:2}Joker{} {C:red,E:2}Rage Quits{} else it gives random {X:chips,C:white} +{} Chips{}"},
+        },
+
+        atlas = 'allan',
+        rarity = 3,
+        cost = 10,
+        pools = { ["Lotsofabuse"] = true },
+
+        unlocked = true,
+        discovered = true,
+        blueprint_compat = true,
+        eternal_compat = true,
+        perishable_compat = true,
+
+         pos = { x = 0, y = 0, },
+        config = { extra = { min_chips = 3000, max_chips = 3499, odds = 4 } },
+
+        loc_vars = function(self, info_queue, center)
+    return {
+        (G.GAME.probabilities.normal or 1),
+        center.ability.extra.odds,
+        center.ability.extra.min_chips,
+        center.ability.extra.max_chips,
+    }
+end,
+
+}
+
+
+
 -----------------------------------------------------------
 ----------- MOD CODE END ----------------------------------
