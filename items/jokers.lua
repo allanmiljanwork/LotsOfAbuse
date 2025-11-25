@@ -300,9 +300,12 @@ SMODS.Joker{
 
     calculate = function(self, card, context)
 
-        if context.other_joker and context.other_joker ~= card then
-            if context.other_joker.config.center.pools and 
-               context.other_joker.config.center.pools["Burger"] then
+        -- bj = burger joker 
+        bj = context.other_joker
+
+        if bj and bj ~= card then
+            if bj.config.center.pools and 
+               bj.config.center.pools["Burger"] then
                 
                 return {
                     message = "X" .. card.ability.extra.xmult .. " Mult",
