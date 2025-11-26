@@ -71,7 +71,7 @@ local function load_files(path, dirs_only)
 		if v.type == "directory" and not blacklist[v.name] then
 			load_files(path .. "/" .. v.name)
 		elseif not dirs_only then
-			if string.find(v.name, ".lua") then -- no X.lua.txt files or whatever unless they are also lua files
+			if string.find(v.name, ".lua") then
 				local f, err = load_file_native(path .. "/" .. v.name)
 				if f then
 					f()
@@ -84,12 +84,9 @@ local function load_files(path, dirs_only)
 end
 local path = SMODS.current_mod.path
 
--- Annoyingly load title text lua
-local f, err = load_file_native(path .. "/Jtem/titletext.lua")
-if f then f() end
 load_files(path, true)
 --#endregion
 
 
-----------------------------------------------------------
+-----------------------------------------------------------
 ----------- MOD CODE END ----------------------------------

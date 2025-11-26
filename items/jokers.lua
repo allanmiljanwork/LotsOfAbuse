@@ -20,7 +20,7 @@ SMODS.Joker{
     key = 'burgerking',
     loc_txt = {
         name = 'Burgerking',
-        text = {"mm burger {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}1{} {C:mult}+4{} Mult"},
     },
     atlas = 'burgerking',
     rarity = 1,
@@ -36,15 +36,19 @@ SMODS.Joker{
     post = { x = 0, y = 0, },
     config = { extra = { mult = 4 } },
 
-    loc_vars = function(self, info_queue, context)
-        return { vars = { mult_mod = self.config.extra.mult } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
     end,
 
     calculate = function(self, card, context)
+
+        local mult_mod = card.ability.extra.mult
+
         if context.joker_main then
             return {
                 mult_mod = card.ability.extra.mult,
-                message = "+" .. card.ability.extra.mult .. "Mult"
+                message = "+" .. card.ability.extra.mult .. "Mult",
+                colour = G.C.MULT
             }
         end
     end,
@@ -63,7 +67,7 @@ SMODS.Joker{
     key = 'mcdonalds',
     loc_txt = {
         name = 'Mcdonalds',
-        text = {"mm burger 2 {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}2{} {C:mult}+4{} Mult"},
     },
     atlas = 'mcdonalds',
     rarity = 1,
@@ -79,15 +83,19 @@ SMODS.Joker{
     post = { x = 0, y = 0, },
     config = { extra = { mult = 4 } },
 
-    loc_vars = function(self, info_queue, context)
-        return { vars = { mult_mod = self.config.extra.mult } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
     end,
 
     calculate = function(self, card, context)
+
+        local mult_mod = card.ability.extra.mult
+
         if context.joker_main then
             return {
                 mult_mod = card.ability.extra.mult,
-                message = "+" .. card.ability.extra.mult .. "Mult"
+                message = "+" .. card.ability.extra.mult .. "Mult",
+                colour = G.C.MULT
             }
         end
     end,
@@ -106,7 +114,7 @@ SMODS.Joker{
     key = 'hesburger',
     loc_txt = {
         name = 'Hesburger',
-        text = {"mm burger 3 {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}3{} {C:mult}+4{} Mult"},
     },
     atlas = 'hesburger',
     rarity = 1,
@@ -122,15 +130,19 @@ SMODS.Joker{
     post = { x = 0, y = 0, },
     config = { extra = { mult = 4 } },
 
-    loc_vars = function(self, info_queue, context)
-        return { vars = { mult_mod = self.config.extra.mult } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
     end,
 
     calculate = function(self, card, context)
+
+        local mult_mod = card.ability.extra.mult
+
         if context.joker_main then
             return {
                 mult_mod = card.ability.extra.mult,
-                message = "+" .. card.ability.extra.mult .. "Mult"
+                message = "+" .. card.ability.extra.mult .. "Mult",
+                colour = G.C.MULT
             }
         end
     end,
@@ -149,7 +161,7 @@ SMODS.Joker{
     key = 'premium',
     loc_txt = {
         name = 'Premium burger',
-        text = {"mm burger 4 {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}4{} {C:mult}+4{} Mult"},
     },
     atlas = 'premium',
     rarity = 1,
@@ -165,15 +177,19 @@ SMODS.Joker{
     post = { x = 0, y = 0, },
     config = { extra = { mult = 4 } },
 
-    loc_vars = function(self, info_queue, context)
-        return { vars = { mult_mod = self.config.extra.mult } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
     end,
 
     calculate = function(self, card, context)
+
+        local mult_mod = card.ability.extra.mult
+
         if context.joker_main then
             return {
                 mult_mod = card.ability.extra.mult,
-                message = "+" .. card.ability.extra.mult .. "Mult"
+                message = "+" .. card.ability.extra.mult .. "Mult",
+                colour = G.C.MULT
             }
         end
     end,
@@ -192,7 +208,7 @@ SMODS.Joker{
     key = 'snackpoint',
     loc_txt = {
         name = 'Snack Point',
-        text = {"mm burger 5 {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}5{} {C:mult}+4{} Mult"},
     },
     atlas = 'snackpoint',
     rarity = 1,
@@ -208,15 +224,20 @@ SMODS.Joker{
     post = { x = 0, y = 0, },
     config = { extra = { mult = 4 } },
 
-    loc_vars = function(self, info_queue, context)
-        return { vars = { mult_mod = self.config.extra.mult } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
     end,
 
     calculate = function(self, card, context)
+
+        local mult_mod = card.ability.extra.mult
+
         if context.joker_main then
             return {
                 mult_mod = card.ability.extra.mult,
-                message = "+" .. card.ability.extra.mult .. "Mult"
+                message = "+" .. card.ability.extra.mult .. "Mult",
+                colour = G.C.MULT
+                
             }
         end
     end,
@@ -235,7 +256,7 @@ SMODS.Joker{
     key = 'uulits',
     loc_txt = {
         name = 'Uulits',
-        text = {"mm burger final {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}final{} {C:mult}+4{} Mult"},
     },
     atlas = 'uulits',
     rarity = 1,
@@ -251,15 +272,19 @@ SMODS.Joker{
     post = { x = 0, y = 0, },
     config = { extra = { mult = 4 } },
 
-    loc_vars = function(self, info_queue, context)
-        return { vars = { mult_mod = self.config.extra.mult } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
     end,
 
     calculate = function(self, card, context)
+
+        local mult_mod = card.ability.extra.mult
+
         if context.joker_main then
             return {
                 mult_mod = card.ability.extra.mult,
-                message = "+" .. card.ability.extra.mult .. "Mult"
+                message = "+" .. card.ability.extra.mult .. "Mult",
+                colour = G.C.MULT
             }
         end
     end,
@@ -278,7 +303,7 @@ SMODS.Joker{
     key = 'giftcard',
     loc_txt = {
         name = 'Gift Card',
-        text = { "For each {C:attention}Burger{} {E:2}Joker{} {X:mult,C:white}X2.5{} Mult{}"},
+        text = { "For each {C:attention}Burger{} {E:2}Joker{} give {X:mult,C:white}X2.5{} Mult{}"},
     },
     atlas = 'giftcard',
     rarity = 3,
@@ -295,13 +320,15 @@ SMODS.Joker{
     config = { extra = { xmult = 2.5 } },
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { Xmult_mod = self.config.extra.xmult } }
+        return { vars = { card.ability.extra.xmult } }
     end,
 
     calculate = function(self, card, context)
 
         -- bj = burger joker 
         bj = context.other_joker
+
+        local Xmult_mod = card.ability.extra.xmult
 
         if bj and bj ~= card then
             if bj.config.center.pools and 
@@ -348,15 +375,30 @@ SMODS.Joker{
          pos = { x = 0, y = 0, },
         config = { extra = { min_chips = 3000, max_chips = 3499, odds = 4 } },
 
-        loc_vars = function(self, info_queue, center)
-    return {
-        (G.GAME.probabilities.normal or 1),
-        center.ability.extra.odds,
-        center.ability.extra.min_chips,
-        center.ability.extra.max_chips,
-    }
-end,
+        loc_vars = function(self, info_queue, card)
+        return { vars = { 
+            G.GAME.probabilities.normal or 1, 
+            card.ability.extra.odds,
+            card.ability.extra.min_chips, 
+            card.ability.extra.max_chips 
+        }}
+    end,
 
+        calculate = function(self, card, context)
+
+            if context.joker_main then
+
+                local chips_amount = pseudorandom('allan_chips', card.ability.extra.min_chips, card.ability.extra.max_chips)
+                return {
+                    chip_mod = chips_amount,
+                    message = "+" .. chips_amount .. " Chips",
+                    colour = G.C.CHIPS
+
+                }
+            end
+        end,
+            
+    
 }
 
 
