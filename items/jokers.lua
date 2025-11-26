@@ -256,7 +256,7 @@ SMODS.Joker{
     key = 'uulits',
     loc_txt = {
         name = 'Uulits',
-        text = {"mm {C:attention}Burger{} {C:legendary}Final{} {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}6{} {C:mult}+4{} Mult"},
     },
     atlas = 'uulits',
     rarity = 1,
@@ -412,7 +412,7 @@ SMODS.Joker{
 						card:juice_up(0.3, 0.4)
 						card.states.drag.is = true
 						card.children.center.pinch.x = true
-                        
+
 						-- This part destroys the card.
 						G.E_MANAGER:add_event(Event({
 							trigger = 'after',
