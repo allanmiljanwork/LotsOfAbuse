@@ -256,7 +256,7 @@ SMODS.Joker{
     key = 'uulits',
     loc_txt = {
         name = 'Uulits',
-        text = {"mm {C:attention}Burger{} {C:legendary}final{} {C:mult}+4{} Mult"},
+        text = {"mm {C:attention}Burger{} {C:legendary}Final{} {C:mult}+4{} Mult"},
     },
     atlas = 'uulits',
     rarity = 1,
@@ -301,10 +301,12 @@ SMODS.Atlas{
 
 SMODS.Joker{
     key = 'giftcard',
+
     loc_txt = {
         name = 'Gift Card',
         text = { "For each {C:attention}Burger{} {E:2}Joker{} give {X:mult,C:white}X2.5{} Mult{}"},
     },
+
     atlas = 'giftcard',
     rarity = 3,
     cost = 15,
@@ -317,6 +319,7 @@ SMODS.Joker{
     perishable_compat = true,
 
     pos = { x = 0, y = 0, },
+
     config = { extra = { xmult = 2.5 } },
 
     loc_vars = function(self, info_queue, card)
@@ -342,6 +345,7 @@ SMODS.Joker{
             end
         end
     end,
+
 }
 
     -- Allan kaart
@@ -377,7 +381,7 @@ SMODS.Joker{
 
         loc_vars = function(self, info_queue, card)
         return { vars = { 
-            G.GAME.probabilities.normal or 1, 
+            (G.GAME.probabilities.normal or 1), 
             card.ability.extra.odds,
             card.ability.extra.min_chips, 
             card.ability.extra.max_chips 
@@ -389,6 +393,7 @@ SMODS.Joker{
             if context.joker_main then
 
                 local chips_amount = pseudorandom('allan_chips', card.ability.extra.min_chips, card.ability.extra.max_chips)
+
                 return {
                     chip_mod = chips_amount,
                     message = "+" .. chips_amount .. " Chips",
@@ -396,9 +401,40 @@ SMODS.Joker{
 
                 }
             end
+
+            if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then
+                if pseudorandom('ragequit') < G.GAME.probabilities.normal / card.ability.extra.odds then
+                
+                G.E_MANAGER:add_event(Event({
+					func = function()
+						play_sound('tarot1')
+						card.T.r = -0.2
+						card:juice_up(0.3, 0.4)
+						card.states.drag.is = true
+						card.children.center.pinch.x = true
+                        
+						-- This part destroys the card.
+						G.E_MANAGER:add_event(Event({
+							trigger = 'after',
+							delay = 0.3,
+							blockable = false,
+							func = function()
+								G.jokers:remove_card(card)
+								card:remove()
+								card = nil
+								return true;
+							end
+						}))
+						return true
+					end
+				}))
+                return {
+                    message = "Rage Quit!",
+                    colour = G.C.NEGATIVE
+                }
+                end
+            end 
         end,
-            
-    
 }
 
 
