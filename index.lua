@@ -7,8 +7,6 @@
 ----------------------------------------------------------
 ----------- MOD CODE -------------------------------------
 
--- Burger joker pool
-
 SMODS.ObjectType({
     key = "Burger",
     default = "j_reserved_parking", -- changed from 'defualt'
