@@ -3,7 +3,7 @@
 SMODS.Atlas {
     key = 'recall',
 
-    path = 'Recall.png',
+    path = 'recall.png',
     px = 71,
     py = 95
 }

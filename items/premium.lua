@@ -2,7 +2,7 @@
 
 SMODS.Atlas {
     key = 'premium',
-    path = 'Premium.png',
+    path = 'premium.png',
     px = 71,
     py = 95
 }

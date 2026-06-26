@@ -2,7 +2,7 @@
 
 SMODS.Atlas {
     key = 'snackpoint',
-    path = 'Snackpoint.png',
+    path = 'snackpoint.png',
     px = 71,
     py = 95
 }

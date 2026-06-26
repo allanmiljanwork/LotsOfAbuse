@@ -1,22 +1,20 @@
--- Mcdonalds
-
+-- burgerking
 SMODS.Atlas {
-    key = 'mcdonalds',
-
-    path = 'Mcdonalds.png',
+    key = 'burgerking',
+    path = 'burgerking.png',
     px = 71,
     py = 95
 }
 
 SMODS.Joker {
-    key = 'mcdonalds',
+    key = 'burgerking',
 
     loc_txt = {
-        name = 'Mcdonalds',
-        text = {"mm {C:attention}Burger{} {C:legendary}2{} {C:mult}+4{} Mult"}
+        name = 'burgerking',
+        text = {"mm {C:attention}Burger{} {C:legendary}1{} {C:mult}+4{} Mult"}
     },
 
-    atlas = 'mcdonalds',
+    atlas = 'burgerking',
     rarity = 1,
     cost = 4,
     pools = {

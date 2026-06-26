@@ -2,7 +2,7 @@
 
 SMODS.Atlas {
     key = 'uulits',
-    path = 'Uulits.png',
+    path = 'uulits.png',
     px = 71,
     py = 95
 }

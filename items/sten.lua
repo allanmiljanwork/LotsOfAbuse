@@ -1,22 +1,21 @@
--- Hesburger
+-- Uulits
 
 SMODS.Atlas {
-    key = 'hesburger',
-
-    path = 'hesburger.png',
+    key = 'uulits',
+    path = 'Uulits.png',
     px = 71,
     py = 95
 }
 
 SMODS.Joker {
-    key = 'hesburger',
+    key = 'uulits',
 
     loc_txt = {
-        name = 'Hesburger',
-        text = {"mm {C:attention}Burger{} {C:legendary}3{} {C:mult}+4{} Mult"}
+        name = 'Uulits',
+        text = {"mm {C:attention}Burger{} {C:legendary}6{} {C:mult}+4{} Mult"}
     },
 
-    atlas = 'hesburger',
+    atlas = 'uulits',
     rarity = 1,
     cost = 4,
     pools = {

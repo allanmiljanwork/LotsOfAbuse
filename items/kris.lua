@@ -2,7 +2,7 @@
 
 SMODS.Atlas {
     key = 'kris',
-    path = 'Krischan.png',
+    path = 'krischan.png',
     px = 71,
     py = 95
 }

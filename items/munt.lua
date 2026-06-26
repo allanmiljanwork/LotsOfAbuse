@@ -3,7 +3,7 @@
 SMODS.Atlas {
     key = 'munt',
 
-    path = 'Muntgreen.png',
+    path = 'muntgreen.png',
     px = 71,
     py = 95
 }

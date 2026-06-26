@@ -1,7 +1,7 @@
 -- Kinkekaart
 SMODS.Atlas {
     key = 'giftcard',
-    path = 'Kinkekaart.png',
+    path = 'kinkekaart.png',
     px = 71,
     py = 95
 }
